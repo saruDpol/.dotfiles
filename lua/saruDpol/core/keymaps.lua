@@ -32,6 +32,10 @@ vim.api.nvim_create_autocmd("FileType", {
 -- remap for s to nothing..
 vim.keymap.set("n", "s", "<Nop>", { buffer = false })
 
+vim.keymap.set("n", "<leader>aa", function()
+	require("alpha").start()
+end, { desc = "Open Alpha Dashboard" })
+
 -- Split Window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
